@@ -8,19 +8,19 @@ import { DataService } from './Services/data-service';
   styleUrl: './app.css'
 })
 export class App implements OnInit{
-  students:any[]=[];
+  students:any[]=[];                                 <!--arrays to store data -->
   weather: any[]=[];
   constructor(private dataService:DataService){ }
 
-  ngOnInit(): void { <!--ngOnInit is the function and within it shows-->
-    this.dataService.GetStudentData().subscribe(
+  ngOnInit(): void { 
+    this.dataService.GetStudentData().subscribe(     <!--subscribed used because GetStudentData() returns observable -->
       (data)=>{
       this.students = data.students;
       console.log(this.students);
       }
     );  
 
-    this.dataService.GetWeatherData().subscribe(
+    this.dataService.GetWeatherData().subscribe(     <!--calling service to gather weather data-->
       (data)=>{
         this.weather = data.weather;
         console.log(this.weather);
