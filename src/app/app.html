@@ -1,10 +1,10 @@
 <h1>Student App</h1>
 
 @for(student of students;track student.id){
-  <li>{{student.name}}</li>
+  <li>{{student.name}}</li> <!-- shows student data based off obj in this case name and id-->
   <li>{{student.id}}</li>
 }
 
-<h3>Weather in Galway</h3>
+<h3>Weather in Galway</h3> <!--heading -->
 
-{{weather[0].main}}, {{weather[0].description}}
+{{weather[0].main}}, {{weather[0].description}} <!-- pulls weather data to display in html-->
