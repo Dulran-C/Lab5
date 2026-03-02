@@ -12,7 +12,7 @@ export class App implements OnInit{
   weather: any[]=[];
   constructor(private dataService:DataService){ }
 
-  ngOnInit(): void {
+  ngOnInit(): void { <!--ngOnInit is the function and within it shows-->
     this.dataService.GetStudentData().subscribe(
       (data)=>{
       this.students = data.students;
