@@ -9,7 +9,7 @@ export class DataService {
   constructor(private httpClient:HttpClient){}
 
   GetStudentData():Observable<any>{ <!--method used to fetch data from external api-->
-    return this.httpClient.get('https://api.jsonblob.com/019caf2a-b942-7422-8261-bc1893bf772c')
+    return this.httpClient.get('https://api.jsonblob.com/019caf2a-b942-7422-8261-bc1893bf772c') <!--link to external api-->
 
   }
 
